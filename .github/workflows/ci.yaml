@@ -26,7 +26,7 @@ jobs:
 
       # Build Dependencies
       - name: Build Dependencies
-        run : npm build
+        run : npm run build
 
       # Upload Artifacts
       - name: Upload Artifacts

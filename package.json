@@ -1,6 +1,6 @@
 {
   "name": "simple-node-app",
   "scripts": {
-    "test": "echo \"No tests yet\""
+    "build": "node index.js"
   }
 }

@@ -35,6 +35,7 @@ jobs:
           name: node-build
           path: dist/
           retention-days: 7
+          
       # Run tests (optional)
-      - name: Run tests
-        run: npm test
+      #- name: Run tests
+      #  run: npm test

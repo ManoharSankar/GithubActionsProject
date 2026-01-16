@@ -1,4 +1,4 @@
-name: Node.js CI
+name: CI
 
 on:
   push:
@@ -35,7 +35,21 @@ jobs:
           name: node-build
           path: dist/
           retention-days: 7
-          
+
       # Run tests (optional)
       #- name: Run tests
       #  run: npm test
+
+  # Setup Python framework
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run basic check
+        run: python -m py_compile app/main.py
